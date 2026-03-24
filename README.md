@@ -19,10 +19,6 @@
 
 <br/>
 
-🇫🇷 <a href="README-fr.md">Lire en français</a>
-
-<br/>
-
 <img src=".github/social-preview.png" alt="Halterofit app showcase" width="100%" />
 
 </div>
