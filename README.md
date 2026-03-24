@@ -56,9 +56,9 @@ Designed for **gym environments** — high contrast dark UI that's easy to read 
 
 ## Architecture
 
-- **Monorepo** — pnpm workspaces + Turborepo. Mobile app (`apps/mobile`), planned web companion (`apps/web`), and shared packages.
-- **Offline-first sync** — WatermelonDB on device ↔ bidirectional sync protocol ↔ Supabase PostgreSQL. Last-write-wins conflict resolution.
-- **Layered architecture** — Expo Router screens → Feature components → Custom hooks → Database services → Zustand stores.
+- **Monorepo** — pnpm workspaces + Turborepo (mobile app, planned web companion, shared packages)
+- **Offline-first sync** — WatermelonDB on device ↔ bidirectional sync ↔ Supabase PostgreSQL
+- **Layered architecture** — Screens → Components → Hooks → Services → Stores
 
 <br/>
 
@@ -67,11 +67,9 @@ Designed for **gym environments** — high contrast dark UI that's easy to read 
 - Built **entirely solo** from zero to production-ready
 - **New Architecture** (Fabric renderer) enabled from day one
 - **React Compiler** for automatic performance optimization
-- Real **offline-first** architecture (not cached API calls — full local database with sync)
-- **1,300+ exercise database** with muscle group mapping and animated demonstrations
-- Custom **drag-to-reorder** with Reanimated gesture handlers
-- **Interactive SVG body diagram** with muscle highlighting (male/female models)
-- Curated **cover image library** (28 gym stock photos) for plan customization
+- Real **offline-first** — full local database with bidirectional sync, not cached API calls
+- Custom **drag-to-reorder** built with Reanimated gesture handlers on the UI thread
+- **Interactive SVG body diagram** with per-muscle tap detection
 
 <br/>
 
@@ -79,7 +77,7 @@ Designed for **gym environments** — high contrast dark UI that's easy to read 
 
 > This is a **showcase repository**. The source code is maintained in a private repository.
 
-I built Halterofit as a solo project to deepen my skills in React Native, offline-first architecture, and production mobile development. This is an ongoing project — I'm actively building new features and refining the UX.
+I built Halterofit as a solo project to push my skills in React Native and production mobile development. This is an ongoing project — I'm actively building new features and refining the UX.
 
 For a code walkthrough, live demo, or to discuss the technical decisions behind this project, feel free to reach out.
 

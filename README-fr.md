@@ -19,7 +19,7 @@ Une application de suivi d'entraînement conçue pour les sportifs qui prennent 
 ## Fonctionnalités
 
 ### Bibliothèque d'exercices
-Parcourez **plus de 1 300 exercices** de la base de données ExerciseDB. Chaque exercice inclut une démonstration GIF animée, des instructions étape par étape, et un **surligneur musculaire interactif** — touchez n'importe quel muscle sur un diagramme corporel pour voir quels exercices le ciblent.
+Parcourez **plus de 1 300 exercices** de la base de données ExerciseDB. Chaque exercice inclut une démonstration GIF animée, des instructions étape par étape, et un **highlighter musculaire interactif** — touchez n'importe quel muscle sur un diagramme corporel pour voir quels exercices le ciblent.
 
 ### Planification d'entraînement
 Créez des **plans multi-jours personnalisés** avec réorganisation par glisser-déposer pour les jours et les exercices. Modifiez les noms des jours, ajoutez des exercices depuis la bibliothèque, et organisez votre semaine d'entraînement exactement comme vous le souhaitez.
@@ -56,22 +56,20 @@ Conçu pour les **environnements de gym** — interface sombre à haut contraste
 
 ## Architecture
 
-- **Monorepo** — pnpm workspaces + Turborepo. Application mobile (`apps/mobile`), companion web planifié (`apps/web`), et packages partagés.
-- **Synchronisation hors-ligne** — WatermelonDB sur l'appareil ↔ protocole de sync bidirectionnel ↔ Supabase PostgreSQL. Résolution de conflits last-write-wins.
-- **Architecture en couches** — Écrans Expo Router → Composants par fonctionnalité → Hooks personnalisés → Services de base de données → Stores Zustand.
+- **Monorepo** — pnpm workspaces + Turborepo (app mobile, companion web planifié, packages partagés)
+- **Synchronisation hors-ligne** — WatermelonDB sur l'appareil ↔ sync bidirectionnelle ↔ Supabase PostgreSQL
+- **Architecture en couches** — Screens → Components → Hooks → Services → Stores
 
 <br/>
 
 ## Points forts du projet
 
-- Construit **entièrement en solo** de zéro à un état prêt pour la production
+- Construit **entièrement en solo** de zéro à production-ready
 - **New Architecture** (Fabric renderer) activée dès le départ
 - **React Compiler** pour l'optimisation automatique des performances
-- Vraie architecture **hors-ligne** (pas de simples appels API en cache — base de données locale complète avec synchronisation)
-- **Base de 1 300+ exercices** avec mapping des groupes musculaires et démonstrations animées
-- **Glisser-déposer** personnalisé avec les gesture handlers de Reanimated
-- **Diagramme SVG interactif** du corps avec surligneur musculaire (modèles homme/femme)
-- **Bibliothèque d'images** curatée (28 photos de gym) pour personnaliser les plans
+- Vrai **offline-first** — base de données locale complète avec sync bidirectionnelle, pas de simples appels API en cache
+- **Drag-to-reorder** custom avec les gesture handlers de Reanimated sur le UI thread
+- **Diagramme SVG interactif** du corps avec détection de tap par muscle
 
 <br/>
 
@@ -79,7 +77,7 @@ Conçu pour les **environnements de gym** — interface sombre à haut contraste
 
 > Ce dépôt est un **showcase**. Le code source est maintenu dans un dépôt privé.
 
-J'ai construit Halterofit comme projet solo pour approfondir mes compétences en React Native, en architecture hors-ligne, et en développement mobile de production. C'est un projet en cours — je développe activement de nouvelles fonctionnalités et peaufine l'expérience utilisateur.
+J'ai construit Halterofit comme projet solo pour pousser mes compétences en React Native et en développement mobile de production. C'est un projet en cours — je développe activement de nouvelles fonctionnalités et peaufine l'expérience utilisateur.
 
 Pour un walkthrough du code, une démo en direct, ou pour discuter des décisions techniques derrière ce projet, n'hésitez pas à me contacter.
 
