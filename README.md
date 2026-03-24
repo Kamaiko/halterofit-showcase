@@ -1,25 +1,10 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/branding/wordmark.png" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/branding/wordmark-dark.png" />
-  <img src="assets/branding/wordmark-dark.png" alt="Halterofit" width="240" />
-</picture>
-
-<br/><br/>
-
-**Track your sets. Follow your plan. See your progress.**
-
-<br/>
-
-![React Native](https://img.shields.io/badge/React_Native-0.81-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-
-<br/>
-
 <img src=".github/social-preview.png" alt="Halterofit app showcase" width="100%" />
+
+<br/>
+
+🇫🇷 <a href="README-fr.md">Lire en français</a>
 
 </div>
 
