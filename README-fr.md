@@ -1,5 +1,19 @@
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/branding/icon.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/branding/icon-dark.svg" />
+  <img src="assets/branding/icon-dark.svg" alt="Halterofit icon" width="130" />
+</picture>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/branding/wordmark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/branding/wordmark-dark.png" />
+  <img src="assets/branding/wordmark-dark.png" alt="Halterofit" width="360" />
+</picture>
+
 <img src=".github/social-preview.png" alt="Halterofit app showcase" width="100%" />
 
 <br/>
