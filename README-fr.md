@@ -6,14 +6,6 @@
   <img src="assets/branding/icon-dark.svg" alt="Halterofit icon" width="130" />
 </picture>
 
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/branding/wordmark.png" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/branding/wordmark-dark.png" />
-  <img src="assets/branding/wordmark-dark.png" alt="Halterofit" width="360" />
-</picture>
-
 <img src=".github/social-preview.png" alt="Halterofit app showcase" width="100%" />
 
 <br/>
@@ -26,10 +18,10 @@
 
 ## À propos
 
-Une application de suivi d'entraînement conçue pour les sportifs qui prennent leur progression au sérieux. Parcourez plus de 1 300 exercices avec démonstrations GIF animées, créez des plans d'entraînement personnalisés avec réorganisation par glisser-déposer, et découvrez des programmes pré-construits — le tout en mode hors-ligne. Construit entièrement en solo.
+Une application de suivi d'entraînement conçue pour les sportifs qui prennent leur progression au sérieux. Parcourez plus de 1 500 exercices avec démonstrations GIF animées, créez des plans d'entraînement personnalisés avec réorganisation par glisser-déposer, et découvrez des programmes pré-construits — le tout en mode hors-ligne. Construit entièrement en solo.
 
 <div align="center">
-<img src="assets/diagrams/user-lifecycle.svg" alt="Cycle de vie utilisateur — de la découverte à la progression" width="100%" />
+<img src="assets/diagrams/user-lifecycle.svg" alt="Cycle de vie utilisateur — de la découverte à la progression" width="700" />
 </div>
 
 <br/>
@@ -37,11 +29,11 @@ Une application de suivi d'entraînement conçue pour les sportifs qui prennent 
 ## Fonctionnalités
 
 <div align="center">
-<img src="assets/diagrams/appfeature.png" alt="Pourquoi les athlètes font confiance à cette app" width="100%" />
+<img src="assets/diagrams/appfeature.png" alt="Pourquoi les athlètes font confiance à cette app" width="700" />
 </div>
 
 ### Bibliothèque d'exercices
-Parcourez **plus de 1 300 exercices** de la base de données ExerciseDB. Chaque exercice inclut une démonstration GIF animée, des instructions étape par étape, et un **highlighter musculaire interactif** — touchez n'importe quel muscle sur un diagramme corporel pour voir quels exercices le ciblent.
+Parcourez **plus de 1 500 exercices** de la base de données ExerciseDB. Chaque exercice inclut une démonstration GIF animée, des instructions étape par étape, et un **highlighter musculaire interactif** — touchez n'importe quel muscle sur un diagramme corporel pour voir quels exercices le ciblent.
 
 ### Planification d'entraînement
 Créez des **plans multi-jours personnalisés** avec réorganisation par glisser-déposer pour les jours et les exercices. Modifiez les noms des jours, ajoutez des exercices depuis la bibliothèque, et organisez votre semaine d'entraînement exactement comme vous le souhaitez.

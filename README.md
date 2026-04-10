@@ -6,14 +6,6 @@
   <img src="assets/branding/icon-dark.svg" alt="Halterofit icon" width="130" />
 </picture>
 
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/branding/wordmark.png" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/branding/wordmark-dark.png" />
-  <img src="assets/branding/wordmark-dark.png" alt="Halterofit" width="360" />
-</picture>
-
 <img src=".github/social-preview.png" alt="Halterofit app showcase" width="100%" />
 
 <br/>
@@ -26,10 +18,10 @@
 
 ## About
 
-A fitness tracking app built for lifters who take their training seriously. Browse 1,300+ exercises with animated GIF demonstrations, build custom workout plans with drag-to-reorder, and discover pre-built training programs — all offline-first. Built entirely solo from scratch.
+A fitness tracking app built for lifters who take their training seriously. Browse 1,500+ exercises with animated GIF demonstrations, build custom workout plans with drag-to-reorder, and discover pre-built training programs — all offline-first. Built entirely solo from scratch.
 
 <div align="center">
-<img src="assets/diagrams/user-lifecycle.svg" alt="User Lifecycle — from discovery to progress" width="100%" />
+<img src="assets/diagrams/user-lifecycle.svg" alt="User Lifecycle — from discovery to progress" width="700" />
 </div>
 
 <br/>
@@ -37,11 +29,11 @@ A fitness tracking app built for lifters who take their training seriously. Brow
 ## Features
 
 <div align="center">
-<img src="assets/diagrams/appfeature.png" alt="Why Athletes Trust This App" width="100%" />
+<img src="assets/diagrams/appfeature.png" alt="Why Athletes Trust This App" width="700" />
 </div>
 
 ### Exercise Library
-Browse **1,300+ exercises** from the ExerciseDB database. Each exercise includes animated GIF demonstrations, step-by-step instructions, and an **interactive muscle highlighter** — tap any muscle on a full-body diagram to see which exercises target it.
+Browse **1,500+ exercises** from the ExerciseDB database. Each exercise includes animated GIF demonstrations, step-by-step instructions, and an **interactive muscle highlighter** — tap any muscle on a full-body diagram to see which exercises target it.
 
 ### Workout Planning
 Build **custom multi-day plans** with full drag-to-reorder support for both days and exercises. Edit day names, add exercises from the library, and organize your training week exactly how you want.
