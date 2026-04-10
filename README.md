@@ -14,9 +14,17 @@
 
 A fitness tracking app built for lifters who take their training seriously. Browse 1,300+ exercises with animated GIF demonstrations, build custom workout plans with drag-to-reorder, and discover pre-built training programs — all offline-first. Built entirely solo from scratch.
 
+<div align="center">
+<img src="assets/diagrams/user-lifecycle.svg" alt="User Lifecycle — from discovery to progress" width="100%" />
+</div>
+
 <br/>
 
 ## Features
+
+<div align="center">
+<img src="assets/diagrams/appfeature.png" alt="Why Athletes Trust This App" width="100%" />
+</div>
 
 ### Exercise Library
 Browse **1,300+ exercises** from the ExerciseDB database. Each exercise includes animated GIF demonstrations, step-by-step instructions, and an **interactive muscle highlighter** — tap any muscle on a full-body diagram to see which exercises target it.

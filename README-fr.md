@@ -14,9 +14,17 @@
 
 Une application de suivi d'entraînement conçue pour les sportifs qui prennent leur progression au sérieux. Parcourez plus de 1 300 exercices avec démonstrations GIF animées, créez des plans d'entraînement personnalisés avec réorganisation par glisser-déposer, et découvrez des programmes pré-construits — le tout en mode hors-ligne. Construit entièrement en solo.
 
+<div align="center">
+<img src="assets/diagrams/user-lifecycle.svg" alt="Cycle de vie utilisateur — de la découverte à la progression" width="100%" />
+</div>
+
 <br/>
 
 ## Fonctionnalités
+
+<div align="center">
+<img src="assets/diagrams/appfeature.png" alt="Pourquoi les athlètes font confiance à cette app" width="100%" />
+</div>
 
 ### Bibliothèque d'exercices
 Parcourez **plus de 1 300 exercices** de la base de données ExerciseDB. Chaque exercice inclut une démonstration GIF animée, des instructions étape par étape, et un **highlighter musculaire interactif** — touchez n'importe quel muscle sur un diagramme corporel pour voir quels exercices le ciblent.
