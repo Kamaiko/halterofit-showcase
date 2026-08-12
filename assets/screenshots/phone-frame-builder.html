@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halterofit — Social Preview Builder</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hint {
+      color: #30363d;
+      font-size: 11px;
+      margin-bottom: 20px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ═══════════════════════════════════════ */
+    /* Social Preview — 1280x640              */
+    /* ═══════════════════════════════════════ */
+    .social-container {
+      width: 1280px;
+      height: 640px;
+      background: linear-gradient(135deg, #0D1117 0%, #161b22 50%, #0D1117 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Fade edges to transparent so it blends with any background */
+    .social-container .edge-fade {
+      position: absolute;
+      inset: 0;
+      z-index: 50;
+      pointer-events: none;
+      box-shadow:
+        inset 40px 0 30px -10px #0D1117,
+        inset -40px 0 30px -10px #0D1117,
+        inset 0 40px 30px -10px #0D1117,
+        inset 0 -40px 30px -10px #0D1117;
+    }
+
+    /* Orb blue */
+    .social-container::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      left: 12%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(14,165,233,0.14) 0%, transparent 60%);
+      filter: blur(60px);
+    }
+    /* Orb violet */
+    .social-container::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      right: 0;
+      top: 15%;
+      background: radial-gradient(circle, rgba(139,92,246,0.09) 0%, transparent 60%);
+      filter: blur(50px);
+    }
+    .orb-cyan {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      left: 30%;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 60%);
+      border-radius: 50%;
+      filter: blur(50px);
+      pointer-events: none;
+    }
+
+    /* ── Phone group ── */
+    .phones {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      perspective: 900px;
+      z-index: 1;
+    }
+
+    /* ── iPhone shell ── */
+    .phone-shell {
+      position: relative;
+      background: #000;
+      border-radius: 36px;
+      border: 2px solid #2a2a2a;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 20px 50px rgba(0,0,0,0.5),
+        0 4px 16px rgba(0,0,0,0.3);
+      overflow: hidden;
+      padding: 6px;
+    }
+
+    /*
+     * Screen size: 627:1388 ratio = 1:2.214
+     * screen width 148px → height = 148 * 2.214 = 328px
+     */
+    .screen-wrap {
+      width: 148px;
+      height: 328px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      background: #0A0A0A;
+    }
+    .screen-wrap img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    /* Dynamic island */
+    .notch {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 54px;
+      height: 16px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 10;
+    }
+
+    /* Home bar */
+    .home-bar {
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 2px;
+      z-index: 10;
+    }
+
+    /* ── Phone transforms ── */
+    .phone { position: relative; }
+
+    .phone.left {
+      transform: rotateY(10deg) translateZ(-25px);
+      z-index: 1;
+    }
+    .phone.center {
+      transform: translateY(-8px) scale(1.06);
+      z-index: 3;
+    }
+    .phone.center .phone-shell {
+      box-shadow:
+        0 0 0 1px rgba(14,165,233,0.1),
+        0 0 35px rgba(14,165,233,0.07),
+        0 25px 60px rgba(0,0,0,0.5),
+        0 6px 20px rgba(0,0,0,0.4);
+    }
+    .phone.right {
+      transform: rotateY(-10deg) translateZ(-25px);
+      z-index: 1;
+    }
+
+    /* ── Text side ── */
+    .text-side {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+    }
+    .wordmark {
+      height: 54px;
+      width: auto;
+    }
+    .tagline {
+      font-size: 14px;
+      color: #8b949e;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+    .badges {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .badge {
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hint">Capture as social-preview.png — F12 → select div → Capture node screenshot</div>
+
+  <div class="social-container" id="social-preview">
+    <div class="edge-fade"></div>
+    <div class="orb-cyan"></div>
+
+    <div class="phones">
+      <div class="phone left">
+        <div class="phone-shell">
+          <div class="screen-wrap">
+            <div class="notch"></div>
+            <img src="01-workout-timeline.png" alt="" />
+            <div class="home-bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone center">
+        <div class="phone-shell">
+          <div class="screen-wrap">
+            <div class="notch"></div>
+            <img src="04-plans-hub.png" alt="" />
+            <div class="home-bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone right">
+        <div class="phone-shell">
+          <div class="screen-wrap">
+            <div class="notch"></div>
+            <img src="03-exercise-detail.png" alt="" />
+            <div class="home-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-side">
+      <img class="wordmark" src="../branding/wordmark.png" alt="Halterofit" />
+      <div class="tagline">Track your sets. Follow your plan. See your progress.</div>
+      <div class="badges">
+        <span class="badge" style="background:#61DAFB;">React Native</span>
+        <span class="badge" style="background:#000;border:1px solid #333;">Expo</span>
+        <span class="badge" style="background:#3178C6;">TypeScript</span>
+        <span class="badge" style="background:#3FCF8E;">Supabase</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
