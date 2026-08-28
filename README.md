@@ -90,6 +90,10 @@ Designed for **gym environments** — high contrast dark UI that's easy to read 
 ## About This Repository
 
 > This is a **showcase repository**. The source code is maintained in a private repository.
+>
+> <sub>Maintainer note — the private repo is `Kamaiko/HalteroFit` (`C:\Nexus\Projects\HalteroFit`).
+> Nothing syncs the two: the stack versions listed above are copied by hand, so they drift.
+> Re-check them against the app before sharing this page.</sub>
 
 I built Halterofit as a solo project to push my skills in React Native and production mobile development. This is an ongoing project — I'm actively building new features and refining the UX.
 
