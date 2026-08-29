@@ -8,96 +8,60 @@
 
 <img src=".github/social-preview.png" alt="Halterofit app showcase" width="100%" />
 
-<br/>
-
-🇫🇷 <a href="README-fr.md">Lire en français</a>
-
 </div>
 
 <br/>
 
 ## About
 
-A fitness tracking app built for lifters who take their training seriously. Browse 1,500+ exercises with animated GIF demonstrations, build custom workout plans with drag-to-reorder, and discover pre-built training programs — all offline-first. Built entirely solo from scratch.
+Halterofit is a workout-tracking app for lifters who take their training seriously: browse 1,500+
+exercises, build your own multi-day plans, log every set at the gym and watch your strength
+move over time. Everything works without a connection — the app keeps its data on the phone and
+syncs to the cloud when it can.
 
-<div align="center">
-<img src="assets/diagrams/user-lifecycle.svg" alt="User Lifecycle — from discovery to progress" width="700" />
-</div>
+Built solo, from scratch, as a production mobile app rather than a tutorial project. This repository
+is its public face; the code stays private.
 
-<br/>
+## What it does
 
-## Features
+- **Exercise library** — 1,500+ exercises with animated demonstrations, and an interactive body map:
+  tap a muscle to see the exercises that target it.
+- **Plan builder** — multi-day programs you arrange by drag-and-drop, days and exercises alike.
+- **Set logging** — built for the gym floor: a few taps per set, a rest timer between them.
+- **Progress** — estimated one-rep max, volume and personal records, computed on the device.
+- **Insights** — coaching findings computed from your own history — plateaus, readiness to progress,
+  volume balance across muscles — each one showing the sets it comes from.
+- **Offline-first** — every feature works with no signal; sync happens in the background when a
+  connection returns.
 
-<div align="center">
-<img src="assets/diagrams/appfeature.png" alt="Why Athletes Trust This App" width="700" />
-</div>
+## How it's built
 
-### Exercise Library
-Browse **1,500+ exercises** from the ExerciseDB database. Each exercise includes animated GIF demonstrations, step-by-step instructions, and an **interactive muscle highlighter** — tap any muscle on a full-body diagram to see which exercises target it.
+| Layer        | Technology                                                                         |
+| ------------ | ---------------------------------------------------------------------------------- |
+| **App**      | React Native + Expo (New Architecture, React Compiler), TypeScript strict, Expo Router |
+| **Data**     | WatermelonDB (SQLite) on the device, bidirectional sync to Supabase (Postgres + Auth) |
+| **State**    | Zustand, MMKV                                                                      |
+| **UI**       | NativeWind, Reanimated, Skia charts, FlashList                                     |
+| **Delivery** | pnpm + Turborepo monorepo, EAS Build, Sentry                                       |
 
-### Workout Planning
-Build **custom multi-day plans** with full drag-to-reorder support for both days and exercises. Edit day names, add exercises from the library, and organize your training week exactly how you want.
+## Engineering highlights
 
-### Plans Marketplace
-Browse and acquire **pre-built training programs** — filter by category (Strength, Hypertrophy, Beginner, Powerlifting) and pricing (Free / Premium). Acquired plans are fully editable.
+- A real offline-first architecture: a full local database with bidirectional sync and soft deletes,
+  not cached API calls.
+- Analytics and coaching insights computed deterministically on the device — the same data always
+  gives the same answer, and every number traces back to logged sets.
+- Custom drag-to-reorder running on the UI thread with Reanimated gesture handlers.
+- An interactive SVG body map with per-muscle tap detection.
 
-### Offline-First
-**Every feature works without internet.** All data is stored on-device via WatermelonDB (SQLite) and syncs to Supabase PostgreSQL when a connection is available. Zero data loss, even mid-workout.
+## About this repository
 
-### Dark Mode First
-Designed for **gym environments** — high contrast dark UI that's easy to read between sets, even in dim lighting.
-
-<br/>
-
-## Tech Stack
-
-| Category | Technology |
-|----------|-----------|
-| **Framework** | React Native 0.81 · Expo SDK 54 · New Architecture (Fabric) |
-| **Language** | TypeScript (strict mode) |
-| **Navigation** | Expo Router v3 (file-based routing) |
-| **Database** | WatermelonDB (offline-first SQLite) |
-| **Backend** | Supabase (Auth + PostgreSQL + sync) |
-| **State** | Zustand + react-native-mmkv |
-| **Styling** | NativeWind v4 + Tailwind CSS |
-| **Animations** | React Native Reanimated 4 |
-| **Lists** | FlashList 2.0 |
-| **Build** | pnpm + Turborepo monorepo · EAS Build |
-| **Monitoring** | Sentry |
-| **Optimization** | React Compiler (automatic memoization) |
-
-<br/>
-
-## Architecture
-
-- **Monorepo** — pnpm workspaces + Turborepo (mobile app, planned web companion, shared packages)
-- **Offline-first sync** — WatermelonDB on device ↔ bidirectional sync ↔ Supabase PostgreSQL
-- **Layered architecture** — Screens → Components → Hooks → Services → Stores
-
-<br/>
-
-## Project Highlights
-
-- Built **entirely solo** from zero to production-ready
-- **New Architecture** (Fabric renderer) enabled from day one
-- **React Compiler** for automatic performance optimization
-- Real **offline-first** — full local database with bidirectional sync, not cached API calls
-- Custom **drag-to-reorder** built with Reanimated gesture handlers on the UI thread
-- **Interactive SVG body diagram** with per-muscle tap detection
-
-<br/>
-
-## About This Repository
-
-> This is a **showcase repository**. The source code is maintained in a private repository.
+> This is a **showcase repository**: the source code is maintained in a private repository.
 >
-> <sub>Maintainer note — the private repo is `Kamaiko/HalteroFit` (`C:\Nexus\Projects\HalteroFit`).
-> Nothing syncs the two: the stack versions listed above are copied by hand, so they drift.
-> Re-check them against the app before sharing this page.</sub>
+> <sub>Maintainer note — nothing syncs this page with the app, so it states only what does not change: no versions, no counts, no phase status. A line that needs a number to stay true does not belong here.</sub>
 
-I built Halterofit as a solo project to push my skills in React Native and production mobile development. This is an ongoing project — I'm actively building new features and refining the UX.
-
-For a code walkthrough, live demo, or to discuss the technical decisions behind this project, feel free to reach out.
+I built Halterofit to learn production mobile development by shipping one, and it is still in active
+development. For a code walkthrough, a live demo, or the reasoning behind the technical decisions,
+reach out.
 
 **Patrick Patenaude**
 
