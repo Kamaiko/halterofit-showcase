@@ -23,7 +23,7 @@ computed on the phone rather than fetched from an API.
 
 ## What it does
 
-- **Exercise library** — 1,500 exercises with animated demonstrations, browsable by muscle group.
+- **Exercise library** — 1,500 exercises, browsable by muscle group.
 - **Plan builder** — multi-day programs you arrange by drag-and-drop, days and exercises alike.
 - **Set logging** — built for the gym floor: a few taps per set, a rest timer between them.
 - **Progress** — estimated one-rep max, volume and personal records, computed on the device.
