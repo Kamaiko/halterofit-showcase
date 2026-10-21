@@ -37,7 +37,7 @@ computed on the phone rather than fetched from an API.
 | Layer        | Technology                                                                         |
 | ------------ | ---------------------------------------------------------------------------------- |
 | **App**      | React Native + Expo (New Architecture, React Compiler), TypeScript strict, Expo Router |
-| **Data**     | WatermelonDB (SQLite) on the device, bidirectional sync to Supabase (Postgres + Auth) |
+| **Data**     | NitromelonDB (SQLite, WatermelonDB's API) on the device, bidirectional sync to Supabase (Postgres + Auth) |
 | **State**    | Zustand, MMKV                                                                      |
 | **UI**       | NativeWind, Reanimated, Skia charts, FlashList                                     |
 | **Delivery** | pnpm + Turborepo monorepo, EAS Build, Sentry                                       |
